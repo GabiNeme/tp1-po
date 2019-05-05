@@ -3,7 +3,6 @@
 #include <iostream>
 
 void leNumeroDeRestricoesEVariaveis(int & numRestricoes, int & numVariaveis){
-
     std::cin >> numRestricoes;
     std::cin >> numVariaveis;
 }

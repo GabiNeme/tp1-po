@@ -15,10 +15,8 @@ void solucionaPLMetodoPrimal(DMatrix & tableauxPrincipal, bool ehPrincipal, int 
 
         //pivoteia
         tableauxPrincipal.pivoteia(linAPivotear, colAPivotear);
-
         //std::cout << "Pivotar " << linAPivotear << ", " << colAPivotear << std::endl;
         //tableauxPrincipal.print();
-
         colAPivotear = cnPositivo(tableauxPrincipal);
     }
 
@@ -76,7 +74,10 @@ void imprimeIlimitada(DMatrix &tableaux, int colIlimitada){
     }
 
     for(int i = 0; i < col-lin; i++){
-        std::cout << d[i] << " ";
+        std::cout << d[i] ;
+        if(i != col-lin-1){
+            std::cout << " ";
+        } 
     }
     std::cout << std::endl;
 }

@@ -14,7 +14,7 @@ int main(){
 
 	DMatrix tableauxPrincipal(n+1, n+m+1);
 	preencheTableauxEntrada(tableauxPrincipal, n, m);
-	//tableauxPrincipal.print();
+
 	bool FPI = bPositivo(tableauxPrincipal);
 	
 	if(FPI){
@@ -24,8 +24,9 @@ int main(){
 		//PL auxiliar
 		DMatrix tableauxAux(n+1, m + 2*n + 1);
 		montaPLAuxiliar(tableauxPrincipal, tableauxAux, n, m);
-
+		//tableauxAux.print();
 		fazSomaParaIniciarSolucao(tableauxAux);
+		//std::cout << std::endl;
 		//tableauxAux.print();
 		solucionaPLMetodoPrimal(tableauxAux, false, n, m);
 		//std::cout << std::endl;

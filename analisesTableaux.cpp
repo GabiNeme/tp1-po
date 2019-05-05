@@ -52,7 +52,10 @@ void imprimeSolucao(DMatrix & tableaux,int n, int m){
     }
 
     for(int i = 0; i<m; i++){
-        std::cout << solucao[i] << " ";
+        std::cout << solucao[i];
+        if(i != m-1){
+            std::cout << " ";
+        }
     }
     std::cout << std::endl;
 
@@ -62,7 +65,10 @@ void imprimeSolucao(DMatrix & tableaux,int n, int m){
 void imprimeCertificado(DMatrix &tableaux, int n, int m){
     //imprime certificado
     for(int i = m; i < m+n; i++){
-        std::cout << p7(tableaux.matrix[0][i]) << " ";
+        std::cout << p7(tableaux.matrix[0][i]);
+        if(i != m+n-1){
+            std::cout << " ";
+        }
     }
     std::cout << std::endl;
 }
